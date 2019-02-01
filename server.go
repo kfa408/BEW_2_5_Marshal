@@ -22,6 +22,10 @@ func main() {
     // Display the list of song titles
 	e.GET("/", func(c echo.Context) error {
         pattern := c.QueryParam("pattern")
+        if len(pattern) == 0{
+            pattern = "Marley"
+        }
+
         var url string = "https://www.songsterr.com/a/ra/songs.json?pattern=" + pattern
 
         resp, err := http.Get(url)
