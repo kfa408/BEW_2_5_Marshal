@@ -1,5 +1,7 @@
 package main
 
+//stretch challenge from Dani: querying the API for all songs that has a bass chord.
+
 import (
 	"net/http"
     // "fmt"
